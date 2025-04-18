@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>TechBinary</title>
 </head>
 
 <body dir="rtl">
 
     <!-- header -->
-    <header class="w-full md:container h-16 mx-auto flex justify-between items-center px-1">
+    <header class="containe h-16 flex justify-between items-center px-1">
 
         <!-- logo -->
         <img src="Logo.png" alt="TechBinary" class="w-28">
@@ -21,11 +22,11 @@
 
         <!-- search -->
         <form id="search" method="get" action="" class="group hidden md:flex bg-[#F5F5F5] rounded-3xl h-2/3 items-center p-1 gap-1">
-            <div class="rounded-full size-8 text-dark-text-Primary cursor-pointer flex justify-center items-center"><i class="fa fa-search"></i></div>
+            <div class="rounded-full size-8 text-dark-text-Primary flex justify-center items-center"><i class="fa fa-search"></i></div>
             
-            <input type="text" class="outline-none border-none h-5/6 text-md focus:placeholder:text-dark-text-Primary placeholder:transition-all duration-300 transition-all md:w-52 lg:w-56 xl:w-60 2xl:w-64 " placeholder="جستوجوی باینری...">
+            <input type="text" class="input-search" placeholder="جستوجوی باینری...">
             
-            <button class="opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-500 rounded-full bg-dark-text-soft size-8 text-light-text-soft cursor-pointer"><i class="fa fa-arrow-left"></i></button>
+            <button class="btn-search"><i class="fa fa-arrow-left"></i></button>
         </form>
         <!-- searchEnd -->
 
@@ -42,7 +43,38 @@
 
 
 
+
+    <!-- hero -->
+    <section id="hero" class="w-full h-[350px] relative bg-[url(../images/1.jpg)] bg-cover bg-fixed bg-center">
+
+        <div class="containe h-full flex flex-col gap-8 pt-20">
+
+            <h1 data-aos="fade-left" class="text-4xl font-extrabold text-white">به تک باینری</h1>
+            <p data-aos="fade-up" data-aos-delay="500" class="text-white/80 w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam nobis, culpa ea 
+                dolorem totam. Optio repellendus quod tempora quisquam? Minima recusandae optio eius dolorum, id facilis corporis ipsam deserunt.
+            </p>
+
+        </div>
+
+    </section>
+    <!-- heroEnd -->
+
+
+
+
+
     <script src="assets/scripts/client-search.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            once : true,
+            duration : 800,
+            easing: 'ease-out-back'
+        });
+    </script>
 </body>
 
 </html>

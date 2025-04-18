@@ -11,11 +11,19 @@
     --color-light-text-Primary: #ffffff;
     --color-light-text-soft : #f8fafc;
 
-    --container-my:1200px;
+    --spacing-container:1000px;
   }
 
 @layer components {
-    
+    .containe{
+        @apply sm:max-w-[100%] md:max-w-[750px] lg:max-w-[800px] xl:max-w-[1100px] 2xl:max-w-[1350px] mx-auto
+    }
+    .input-search{
+        @apply outline-none border-none h-5/6 text-base focus:placeholder:text-dark-text-Primary placeholder:transition-all duration-300 transition-all md:w-52 lg:w-56 xl:w-60 2xl:w-64 
+    }
+    .btn-search{
+        @apply opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-500 rounded-full bg-dark-text-soft size-8 text-light-text-soft cursor-pointer
+    }
 }
 
 img{
