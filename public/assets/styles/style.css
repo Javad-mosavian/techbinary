@@ -17,6 +17,11 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-my-second: #0369a1;
+    --color-dark-text-Primary: #1e293b;
+    --color-dark-text-soft: #334155;
+    --color-light-text-Primary: #ffffff;
+    --color-light-text-soft: #f8fafc;
   }
 }
 @layer base {
@@ -230,6 +235,12 @@
   .bg-\[\#F5F5F5\] {
     background-color: #F5F5F5;
   }
+  .bg-dark-text-soft {
+    background-color: var(--color-dark-text-soft);
+  }
+  .bg-my-second {
+    background-color: var(--color-my-second);
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -253,6 +264,15 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-dark-text-Primary {
+    color: var(--color-dark-text-Primary);
+  }
+  .text-light-text-Primary {
+    color: var(--color-light-text-Primary);
+  }
+  .text-light-text-soft {
+    color: var(--color-light-text-soft);
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -273,13 +293,13 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  .group-valid\:visible {
-    &:is(:where(.group):valid *) {
+  .group-focus-within\:visible {
+    &:is(:where(.group):focus-within *) {
       visibility: visible;
     }
   }
-  .group-valid\:opacity-100 {
-    &:is(:where(.group):valid *) {
+  .group-focus-within\:opacity-100 {
+    &:is(:where(.group):focus-within *) {
       opacity: 100%;
     }
   }
@@ -288,6 +308,13 @@
       transition-property: all;
       transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
       transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .focus\:placeholder\:text-dark-text-Primary {
+    &:focus {
+      &::placeholder {
+        color: var(--color-dark-text-Primary);
+      }
     }
   }
   .md\:container {
@@ -335,6 +362,11 @@
       width: calc(var(--spacing) * 64);
     }
   }
+}
+@layer components;
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 @property --tw-font-weight {
   syntax: "*";

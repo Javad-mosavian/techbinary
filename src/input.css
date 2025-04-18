@@ -1,3 +1,24 @@
 @import "tailwindcss";
 
 
+@theme {
+    --color-my-first: #FFFFFF;
+    --color-my-second: #0369a1;
+    
+    --color-dark-text-Primary: #1e293b;
+    --color-dark-text-soft: #334155;
+
+    --color-light-text-Primary: #ffffff;
+    --color-light-text-soft : #f8fafc;
+
+    --container-my:1200px;
+  }
+
+@layer components {
+    
+}
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+}
