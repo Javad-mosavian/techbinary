@@ -1,0 +1,16 @@
+{
+  "author": "javad",
+  "name": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tail": "npx tailwindcss -i ./src/input.css -o ./public/assets/styles/style.css --watch"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
+}
