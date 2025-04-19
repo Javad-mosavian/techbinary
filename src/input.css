@@ -9,7 +9,7 @@
     --color-dark-text-soft: #334155;
 
     --color-light-text-Primary: #ffffff;
-    --color-light-text-soft : #f8fafc;
+    --color-light-text-soft : #f5f5f5;
 
   }
 
@@ -24,64 +24,67 @@
         @apply opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-500 rounded-full bg-dark-text-soft size-8 text-light-text-soft cursor-pointer
     }
     .post-wrapper {
-        @apply w-full h-[200px] md:h-[280px] flex gap-5 py-5;
+        @apply w-full h-[200px] md:h-[280px] flex gap-5 py-5 
       }
     
       .post-left {
-        @apply flex-1 flex flex-col justify-between;
+        @apply flex-1 flex flex-col justify-between
       }
     
       .post-author {
-        @apply flex items-center gap-2 h-2/12 md:h-3/12;
+        @apply flex items-center gap-2 h-2/12 md:h-3/12
       }
     
       .post-author-img {
-        @apply size-[30px] md:size-[50px] object-cover rounded-full;
+        @apply size-[30px] md:size-[50px] object-cover rounded-full
       }
     
       .post-author-text {
-        @apply text-sm md:text-base text-dark-text-soft;
+        @apply text-sm md:text-base text-dark-text-soft
       }
     
       .post-content {
 
-        @apply h-7/12 ;
+        @apply h-7/12 
       }
     
       .post-title {
-        @apply text-lg md:text-2xl font-extrabold text-dark-text-Primary/80 pt-2 group-hover:underline;
+        @apply text-lg md:text-2xl font-extrabold text-dark-text-Primary/80 pt-2 group-hover:underline
       }
     
       .post-excerpt {
-        @apply mt-2 text-sm md:text-base font-light text-dark-text-soft text-justify;
+        @apply mt-2 text-sm md:text-base font-light text-dark-text-soft text-justify
       }
     
       .post-footer {
-        @apply flex items-end justify-between h-3/12;
+        @apply flex items-end justify-between h-3/12
       }
     
       .post-tag {
-        @apply bg-dark-text-soft/15 px-3 py-1 rounded-xl hover:bg-dark-text-soft/25 transition;
+        @apply bg-dark-text-soft/15 px-3 py-1 rounded-xl hover:bg-dark-text-soft/25 transition
       }
     
       .like-checkbox {
-        @apply  hidden;
+        @apply  hidden
       }
     
       .like-icon-wrapper {
-        @apply text-2xl transition duration-100 text-dark-text-soft peer-checked:text-red-500;
+        @apply text-2xl transition duration-100 text-dark-text-soft peer-checked:text-red-500
       }
     
       .like-icon {
-        @apply  hover:scale-110 text-xl transition duration-150 ease-in-out;
+        @apply  hover:scale-110 text-xl transition duration-150 ease-in-out
       }
     
       .post-thumbnail-link {
-        @apply w-[120px] md:w-[160px] h-full shrink-0;
+        @apply w-[120px] md:w-[160px] h-full shrink-0
       }
     
       .post-thumbnail-img {
-        @apply w-full h-full object-cover rounded-md;
+        @apply w-full h-full object-cover rounded-md
+      }
+      .aside-category{
+        @apply p-1 rounded-lg bg-light-text-soft hover:brightness-95 transition duration-300 min-w-12 text-center text-sm text-dark-text-soft
       }
     
 }
