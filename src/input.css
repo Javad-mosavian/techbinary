@@ -11,12 +11,11 @@
     --color-light-text-Primary: #ffffff;
     --color-light-text-soft : #f8fafc;
 
-    --spacing-container:1000px;
   }
 
 @layer components {
     .containe{
-        @apply sm:max-w-[100%] md:max-w-[750px] lg:max-w-[800px] xl:max-w-[1100px] 2xl:max-w-[1350px] mx-auto
+        @apply sm:max-w-[100%] md:max-w-[100%] lg:max-w-[1000px] xl:max-w-[1100px] 2xl:max-w-[1350px] mx-auto
     }
     .input-search{
         @apply outline-none border-none h-5/6 text-base focus:placeholder:text-dark-text-Primary placeholder:transition-all duration-300 transition-all md:w-52 lg:w-56 xl:w-60 2xl:w-64 
@@ -24,9 +23,81 @@
     .btn-search{
         @apply opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-500 rounded-full bg-dark-text-soft size-8 text-light-text-soft cursor-pointer
     }
+    .post-wrapper {
+        @apply w-full h-[200px] md:h-[280px] flex gap-5 py-5;
+      }
+    
+      .post-left {
+        @apply flex-1 flex flex-col justify-between;
+      }
+    
+      .post-author {
+        @apply flex items-center gap-2 h-2/12 md:h-3/12;
+      }
+    
+      .post-author-img {
+        @apply size-[30px] md:size-[50px] object-cover rounded-full;
+      }
+    
+      .post-author-text {
+        @apply text-sm md:text-base text-dark-text-soft;
+      }
+    
+      .post-content {
+
+        @apply h-7/12 ;
+      }
+    
+      .post-title {
+        @apply text-lg md:text-2xl font-extrabold text-dark-text-Primary/80 pt-2 group-hover:underline;
+      }
+    
+      .post-excerpt {
+        @apply mt-2 text-sm md:text-base font-light text-dark-text-soft text-justify;
+      }
+    
+      .post-footer {
+        @apply flex items-end justify-between h-3/12;
+      }
+    
+      .post-tag {
+        @apply bg-dark-text-soft/15 px-3 py-1 rounded-xl hover:bg-dark-text-soft/25 transition;
+      }
+    
+      .like-checkbox {
+        @apply  hidden;
+      }
+    
+      .like-icon-wrapper {
+        @apply text-2xl transition duration-100 text-dark-text-soft peer-checked:text-red-500;
+      }
+    
+      .like-icon {
+        @apply  hover:scale-110 text-xl transition duration-150 ease-in-out;
+      }
+    
+      .post-thumbnail-link {
+        @apply w-[120px] md:w-[160px] h-full shrink-0;
+      }
+    
+      .post-thumbnail-img {
+        @apply w-full h-full object-cover rounded-md;
+      }
+    
 }
 
 img{
     user-select: none;
     -webkit-user-drag: none;
 }
+.truncate {
+    display: -webkit-box;
+    max-width: 90%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* optional, mainly affects inline text */
+    white-space: normal; /* important: allows wrapping */
+  }
+  
+
