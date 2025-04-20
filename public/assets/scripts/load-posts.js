@@ -1,6 +1,7 @@
 const main = document.getElementById("main");
 const aside = document.getElementById("aside");
-const bottomOffset = 1000;
+const btnUp = document.getElementById("btn-up");
+const bottomOffset = 500;
 const _url = "https://mocki.io/v1/e16771af-9618-4112-873f-6442b3070053";
 var loaded = false;
 const clientHeight = window.innerHeight;
@@ -9,6 +10,13 @@ document.onscroll = () => {
     const clientPosition = window.scrollY;
     const pageHight = document.documentElement.scrollHeight;
 
+    if(2000 <= clientPosition && btnUp.classList.contains("hidden")){
+        btnUp.classList.add("fixed");
+        btnUp.classList.remove("hidden");
+    }else if(2000 >= clientPosition && btnUp.classList.contains("fixed")){
+        btnUp.classList.add("hidden");
+        btnUp.classList.remove("fixed");
+    }
 
     if ((pageHight - clientHeight - bottomOffset) <= clientPosition && !loaded) {
         load();
