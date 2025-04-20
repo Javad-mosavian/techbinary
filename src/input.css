@@ -13,6 +13,39 @@
 
   }
 
+label,input{
+  font-family: sahelNormal;
+}
+h1{
+  font-family: sahelExtra;
+}
+h2{
+  font-family: sahelBold;
+}
+h3,h4{
+  font-family: sahelNormal;
+}
+p,span,a{
+  font-family: sahelThin;
+}
+
+@font-face {
+  font-family: sahelBold;
+  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Bold.ttf);
+}
+@font-face {
+  font-family: sahelExtra;
+  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Black.ttf);
+}
+@font-face {
+  font-family: sahelThin;
+  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Light.ttf);
+}
+@font-face {
+  font-family: sahelNormal;
+  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel.ttf);
+}
+
 @layer components {
     .containe{
         @apply sm:max-w-[100%] md:max-w-[100%] lg:max-w-[1000px] xl:max-w-[1100px] 2xl:max-w-[1350px] mx-auto
@@ -85,6 +118,9 @@
       }
       .aside-category{
         @apply p-1 rounded-lg bg-light-text-soft hover:brightness-95 transition duration-300 min-w-12 text-center text-sm text-dark-text-soft
+      }
+      .auth-input{
+        @apply h-10 rounded-2xl bg-light-text-soft outline-none border-none px-2 transition-all hover:pr-4 duration-300 focus:pr-4
       }
     
 }
