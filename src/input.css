@@ -120,7 +120,10 @@ p,span,a{
         @apply p-1 rounded-lg bg-light-text-soft hover:brightness-95 transition duration-300 min-w-12 text-center text-sm text-dark-text-soft
       }
       .auth-input{
-        @apply h-10 rounded-2xl bg-light-text-soft outline-none border-none px-2 transition-all hover:pr-4 duration-300 focus:pr-4
+        @apply h-10 rounded-2xl bg-light-text-Primary shadow-[0_0px_10px_rgba(0,0,0,0.15)] outline-none border-none px-2 transition-all hover:pr-4 duration-300 focus:pr-4 placeholder:opacity-70
+      }
+      .auth-btn{
+        @apply w-full lg:w-1/2 bg-orange-500 text-center rounded-2xl h-9 text-white cursor-pointer hover:brightness-110 transition-all duration-300 text-lg font-bold flex justify-center items-center relative
       }
     
 }
