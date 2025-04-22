@@ -125,6 +125,12 @@ p,span,a{
       .auth-btn{
         @apply w-full lg:w-1/2 bg-orange-500 text-center rounded-2xl h-9 text-white cursor-pointer hover:brightness-110 transition-all duration-300 text-lg font-bold flex justify-center items-center relative
       }
+      .btn-up{
+        @apply rounded-full justify-center items-center bg-sky-700 text-white size-[50px] md:size-14 z-30 cursor-pointer bottom-2 right-2 md:bottom-10 md:right-10
+      }
+      .digit-input{
+        @apply block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg outline-none focus:ring-1
+      }
     
 }
 
