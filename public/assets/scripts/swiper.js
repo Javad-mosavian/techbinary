@@ -1,7 +1,7 @@
 
 const swiper = new Swiper(".mySwiper", {
     autoplay: {delay: 2000,},
-    slidesPerView: 1.1,
+    slidesPerView: 1.2,
     spaceBetween: 24,
     centeredSlides: true,
     grabCursor: true,
@@ -31,15 +31,4 @@ const swiper = new Swiper(".mySwiper", {
             slidesPerView: 2.5,
         }
     },
-});
-
-const swiper2 = new Swiper(".mySwiper2", {
-    autoplay: {delay: 2000,},
-    slidesPerView: 1.3,
-    spaceBetween: 24,
-    centeredSlides: true,
-    grabCursor: true,
-    effect:"fade",
-    time:400,
-    loop: true,
 });

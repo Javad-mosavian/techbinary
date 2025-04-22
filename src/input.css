@@ -13,37 +13,37 @@
 
   }
 
-label,input{
-  font-family: sahelNormal;
-}
-h1{
-  font-family: sahelExtra;
-}
-h2{
-  font-family: sahelBold;
-}
-h3,h4{
-  font-family: sahelNormal;
-}
-p,span,a{
-  font-family: sahelThin;
-}
+  label,input{
+    font-family: sahelNormal;
+  }
+  h1{
+    font-family: sahelExtra;
+  }
+  h2{
+    font-family: sahelBold;
+  }
+  h3,h4{
+    font-family: sahelNormal;
+  }
+  p,span,a{
+    font-family: sahelThin;
+  }
 
 @font-face {
   font-family: sahelBold;
-  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Bold.ttf);
+  src: url(../fonts/sahel-font-v3.4.0/Sahel-Bold.ttf);
 }
 @font-face {
   font-family: sahelExtra;
-  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Black.ttf);
+  src: url(../fonts/sahel-font-v3.4.0/Sahel-Black.ttf);
 }
 @font-face {
   font-family: sahelThin;
-  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel-Light.ttf);
+  src: url(../fonts/sahel-font-v3.4.0/Sahel-Light.ttf);
 }
 @font-face {
   font-family: sahelNormal;
-  src: url(/public/assets/fonts/sahel-font-v3.4.0/Sahel.ttf);
+  src: url(../fonts/sahel-font-v3.4.0/Sahel.ttf);
 }
 
 @layer components {
@@ -130,6 +130,15 @@ p,span,a{
       }
       .digit-input{
         @apply block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg outline-none focus:ring-1
+      }
+      .auth-aside{
+        @apply h-4/5 md:h-full w-full md:w-2/4 lg:w-2/6 2xl:w-1/4 bg-light-text-Primary flex flex-col justify-center items-center py-10
+      }
+      .auth-right{
+        @apply h-1/5 md:h-full md:w-2/4 lg:w-4/6 2xl:w-3/4 bg-gradient-to-tr from-sky-500 to-sky-800 flex flex-col justify-center items-center space-y-5 px-5 text-justify
+      }
+      .aside-category-mobile{
+        @apply  p-1 rounded-lg text-center text-sm text-dark-text-soft
       }
     
 }

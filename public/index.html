@@ -36,8 +36,9 @@
 
         <!-- auth -->
         <div class="flex gap-2 items-center">
-            <a class="px-3 pb-1 text-dark-text-Primary text-lg" href="auth/signin.html">ورود</a>
-            <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md" href="auth/signin.html">ثبت نام</a>
+            <a class="px-3 pb-1 text-dark-text-Primary text-lg" href="./auth/signin.html">ورود</a>
+            <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md"
+                href="./auth/signup.html">ثبت نام</a>
         </div>
         <!-- authEnd -->
 
@@ -52,8 +53,10 @@
 
         <div class="containe h-full flex flex-col gap-8 pt-20 items-center">
 
-            <h1 data-aos="fade-left" class="text-3xl md:text-4xl text-center font-extrabold text-white leading-16">به تک باینری <br>دنیای تکنولوژی خوش آمدید</h1>
-            <p data-aos="fade-up" data-aos-delay="500" class="text-white/80 w-full md:w-1/2 px-6 text-center font-black">
+            <h1 data-aos="fade-left" class="text-3xl md:text-4xl text-center font-extrabold text-white leading-16">به تک
+                باینری <br>دنیای تکنولوژی خوش آمدید</h1>
+            <p data-aos="fade-up" data-aos-delay="500"
+                class="text-white/80 w-full md:w-1/2 px-6 text-center font-black">
                 فناوری رو با یه فنجون چای داغ و حال خوب یاد بگیر!
             </p>
 
@@ -67,17 +70,32 @@
 
         <aside id="aside" class="w-full md:w-1/3 md:min-h-full flex flex-col border-r-2 p-2 md:pr-8 border-black/10 pt-10 md:py-10 gap-5">
 
+            <div class=" md:hidden mb-10 ">
+                <div class="w-full  flex flex-wrap gap-2 justify-start items-start content-start bg-slate-200 p-3 rounded-2xl">
+                    <h2 class="text-xl w-full text-center justify-center flex items-center gap-2 text-dark-text-soft mb-2">دسته بندی ها</h2>
+                    <div id="mobile-category" class="grid grid-cols-2 w-full text-center space-y-5 overflow-hidden relative transition duration-700">
+                        <a href="" class="aside-category-mobile">category</a>
+                        <a href="" class="aside-category-mobile">go</a>
+                        <a href="" class="aside-category-mobile">like</a>
+                        <a href="" class="aside-category-mobile">content</a>
+                        <a href="" class="aside-category-mobile">post</a>
+                        <a href="" class="aside-category-mobile">google</a>
+                        <a href="" class="aside-category-mobile">blog</a>
+                        <a href="" class="aside-category-mobile">app</a>
+                    </div>
+                </div>
+            </div >
             <!-- ad -->
 
-            <a href="">
+            <!-- <a href="">
                 <div id="advertisment" class="w-full h-52 bg-slate-200 flex items-center justify-center rounded-2xl">
                     <h1 class="text-center text-2xl font-bold">Your AD <br>Here</h1>
                 </div>
-            </a>
+            </a> -->
 
             <!-- adEnd -->
 
-            <div class="sticky top-10 space-y-5">
+            <div class="hidden md:block top-10 space-y-5 md:sticky">
                 <div class="w-full  flex flex-wrap gap-2 justify-start items-start content-start">
                     <h2 class="text-xl w-full text-right flex items-center gap-2 text-dark-text-soft mb-2"><span
                             class="flex justify-center items-center rounded-full bg-light-text-soft size-10 text-base"><i
@@ -92,30 +110,13 @@
                     <a href="" class="aside-category">app</a>
 
                 </div>
-                <div class="w-full flex flex-wrap gap-2 justify-start items-start content-start">
-                    <h2 class="text-xl w-full text-right flex items-center gap-2 text-dark-text-soft mb-2"><span class="flex justify-center items-center rounded-full bg-light-text-soft size-10 text-base"><i class="fa fa-chain"></i></span>مطالب مرتبط</h2>
-                    <a href="" class="aside-category">category</a>
-                    <a href="" class="aside-category">go</a>
-                    <a href="" class="aside-category">like</a>
-                    <a href="" class="aside-category">content</a>
-                    <a href="" class="aside-category">post</a>
-                    <a href="" class="aside-category">google</a>
-                    <a href="" class="aside-category">blog</a>
-                    <a href="" class="aside-category">app</a>
-    
-                </div>
-                </div>
             </div>
-
             
-
-            
-
         </aside>
         <main id="main" class="w-full relative pb-24 px-2 md:px-5 lg:px-8 md:w-2/3 flex flex-col md:py-10 divide-black/10 divide-y-[1px]">
             <button id="btn-up" onclick="window.scrollTo(0,0);" class="btn-up hidden"><i class="fa fa-arrow-up"></i></button>
-            <div class="w-full max-w-5xl mx-auto py-10 h-[600px] px-4">
-                <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">محبوب‌ترین ها</h2>
+            <div class="w-full max-w-5xl mx-auto py-2 md:py-5 h-[600px] px-4">
+                <h2 class="text-3xl font-bold text-center mb-5 text-gray-800">محبوب‌ترین ها</h2>
 
                 <div class="swiper mySwiper h-[450px]">
                     <div class="swiper-wrapper pt-8">
