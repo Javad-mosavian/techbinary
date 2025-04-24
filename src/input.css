@@ -120,7 +120,7 @@
         @apply p-1 rounded-lg bg-light-text-soft hover:brightness-95 transition duration-300 min-w-12 text-center text-sm text-dark-text-soft
       }
       .auth-input{
-        @apply h-10 rounded-2xl bg-light-text-Primary shadow-[0_0px_10px_rgba(0,0,0,0.15)] outline-none border-none px-2 transition-all hover:pr-4 duration-300 focus:pr-4 placeholder:opacity-70
+        @apply placeholder:text-right box-border h-10 rounded-2xl bg-light-text-Primary shadow-[0_0px_10px_rgba(0,0,0,0.15)] outline-none border-none px-3 transition-all hover:pr-4 duration-300 focus:pr-4 placeholder:opacity-70
       }
       .auth-btn{
         @apply w-full lg:w-1/2 bg-orange-500 text-center rounded-2xl h-9 text-white cursor-pointer hover:brightness-110 transition-all duration-300 text-lg font-bold flex justify-center items-center relative
@@ -140,6 +140,36 @@
       .aside-category-mobile{
         @apply  p-1 rounded-lg text-center text-sm text-dark-text-soft
       }
+
+      .admin-aside-a{
+        @apply hover:text-light-text-soft duration-300 transition-all
+      }
+
+      /* dashboard */
+      .dashboard-cards{
+        @apply relative flex flex-col items-center justify-center w-full h-full rounded-2xl bg-light-text-Primary overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px] shadow-black/10 hover:scale-[1.01]
+      }
+      .dashboard-cards div {
+        @apply flex flex-col items-center justify-center flex-1 mt-10
+      }
+      .dashboard-cards div h1{
+        @apply text-3xl font-bold text-dark-text-Primary
+      }
+      .dashboard-cards div span{
+        @apply text-dark-text-soft
+      }
+      /* dashboardEnd */
+
+      .td-action{
+        @apply hover:underline cursor-pointer
+      }
+      td.enabled{
+        @apply text-green-600
+      }
+      td.disabled{
+        @apply text-red-600
+      }
+
     
 }
 
@@ -156,5 +186,13 @@ img{
     text-overflow: ellipsis; /* optional, mainly affects inline text */
     white-space: normal; /* important: allows wrapping */
   }
+
+  .gutter{
+    scrollbar-gutter: stable;
+  }
   
 
+  input[type='password']{
+    text-align: left;
+    direction: ltr;
+  }
