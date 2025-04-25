@@ -14,11 +14,13 @@
         <!-- Sidebar -->
         <aside class="w-1/5 h-full bg-zinc-800 flex flex-col justify-start items-center p-10">
             <img src="../Logo.png" alt="TechBinary" class="w-full  md:pb-10">
-            <nav class="flex-1 flex flex-col justify-start w-full text-right text-light-text-soft/80 items-start space-y-5 font-bold text-lg">
+            <nav
+                class="flex-1 flex flex-col justify-start w-full text-right text-light-text-soft/80 items-start space-y-5 font-bold text-lg">
                 <a href="dashboard.html" class="admin-aside-a"><i class="fa fa-tachometer pl-3"></i>داشبورد</a>
                 <a href="categories.html" class="admin-aside-a"><i class="far fa-folder-open pl-3"></i>دسته بندی ها</a>
                 <a href="posts.html" class="admin-aside-a"><i class="fas fa-file pl-3"></i>پست ها</a>
                 <a href="comments.html" class="admin-aside-a"><i class="fa fa-comment pl-3"></i>کامنت ها</a>
+                <a href="users.html" class="admin-aside-a"><i class="fa fa-users pl-3"></i>کاربران</a>
             </nav>
         </aside>
         <!-- sidebarEnd -->
@@ -37,15 +39,17 @@
 
             <!-- Table -->
             <section class="flex-1 overflow-hidden rounded-2xl">
-                <div  class="h-full overflow-y-auto space-y-5 p-5">
+                <div class="h-full overflow-y-auto space-y-5 p-5">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-light-text-Primary">
 
-                        <div id="search" class="flex flex-row items-center text-center bg-light-text-soft h-8 w-52 rounded-md px-2 my-3 mr-3">
-                            <input type="text" oninput="search(this.value)" placeholder="جستوجو..." class="w-44 text-right h-full px-2 outline-none border-none placeholder:text-right">
+                        <div id="search"
+                            class="flex flex-row items-center text-center bg-light-text-soft h-8 w-52 rounded-md px-2 my-3 mr-3">
+                            <input type="text" oninput="search(this.value)" placeholder="جستوجو..."
+                                class="w-44 text-right h-full px-2 outline-none border-none placeholder:text-right">
                             <i class="fa fa-search w-5"></i>
                         </div>
 
-                        
+
                         <table dir="rtl" class="w-full text-sm text-left rtl:text-right text-gray-500">
                             <thead class="text-sm text-center uppercase bg-sky-900 text-white">
                                 <tr>
@@ -59,16 +63,18 @@
                             <tbody id="rows">
                                 <!-- Row 1 -->
                                 <tr>
-                                    <th scope="row" >101</th>
+                                    <th scope="row">101</th>
                                     <td data-search="on" class=" search">پی اچ پی</td>
                                     <td class="">24</td>
                                     <td class=" text-red-500">غیرفعال</td>
                                     <td class="px-2 w-72 py-4">
                                         <div class="flex text-center justify-center items-center gap-2">
                                             <a href="#edite" class="bg-sky-500 admin-table-btn td-action">ویرایش</a>
-                                            <form method="post"><button class="bg-green-500 admin-table-btn td-action">تغییر
+                                            <form method="post"><button
+                                                    class="bg-green-500 admin-table-btn td-action">تغییر
                                                     وضعیت</button></form>
-                                            <form method="post"><button class="bg-red-500 admin-table-btn td-action">حذف</button>
+                                            <form method="post"><button
+                                                    class="bg-red-500 admin-table-btn td-action">حذف</button>
                                             </form>
                                         </div>
                                     </td>
@@ -76,16 +82,18 @@
 
                                 <!-- Row 2 -->
                                 <tr>
-                                    <th scope="row" >102</th>
+                                    <th scope="row">102</th>
                                     <td data-search="on" class=" search">جاوا اسکریپت</td>
                                     <td class="">82</td>
                                     <td class=" text-green-600">فعال</td>
                                     <td class="px-2 py-4">
                                         <div class="flex text-center justify-center items-center gap-2">
                                             <a href="#edite" class="bg-sky-500 admin-table-btn td-action">ویرایش</a>
-                                            <form method="post"><button class="bg-green-500 admin-table-btn td-action">تغییر
+                                            <form method="post"><button
+                                                    class="bg-green-500 admin-table-btn td-action">تغییر
                                                     وضعیت</button></form>
-                                            <form method="post"><button class="bg-red-500 admin-table-btn td-action">حذف</button>
+                                            <form method="post"><button
+                                                    class="bg-red-500 admin-table-btn td-action">حذف</button>
                                             </form>
                                         </div>
                                     </td>
@@ -93,23 +101,26 @@
 
                                 <tr>
                                     <th scope="row">102</th>
-                                    <td data-search="on" >سلام</td>
-                                    <td >82</td>
+                                    <td data-search="on">سلام</td>
+                                    <td>82</td>
                                     <td class="text-green-600">فعال</td>
                                     <td class="px-2 py-4">
                                         <div class="admin-table-btn-parent">
                                             <a href="#edite" class="bg-sky-500 admin-table-btn td-action">ویرایش</a>
-                                            <form method="post"><button class="bg-green-500 admin-table-btn td-action">تغییر
+                                            <form method="post"><button
+                                                    class="bg-green-500 admin-table-btn td-action">تغییر
                                                     وضعیت</button></form>
-                                            <form method="post"><button class="bg-red-500 admin-table-btn td-action">حذف</button>
+                                            <form method="post"><button
+                                                    class="bg-red-500 admin-table-btn td-action">حذف</button>
                                             </form>
                                         </div>
                                     </td>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
-                        <h3 id="noResult" class="hidden text-center mx-auto text-lg text-red-600 my-2">چیزی پیدا نشد</h3>
+                        <h3 id="noResult" class="hidden text-center mx-auto text-lg text-red-600 my-2">چیزی پیدا نشد
+                        </h3>
                     </div>
                 </div>
             </section>

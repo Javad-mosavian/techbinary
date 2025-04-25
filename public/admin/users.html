@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <title>پست ها</title>
+    <title>کاربران</title>
 </head>
 
 <body dir="rtl">
@@ -29,12 +29,8 @@
         <main class="w-4/5 h-full bg-light-text-soft flex flex-col px-10 py-5">
             <!-- Header -->
             <header class="flex justify-between flex-row items-center mb-5 p-5">
-                <h1 class="text-3xl text-dark-text-Primary"><i class="fa fa-file ml-3"></i>
-                    پست ها </i>
+                <h1 class="text-3xl text-dark-text-Primary"><i class="fa fa-comment ml-3"></i>کاربران</i>
                 </h1>
-                <a href="https://10learn.ir:2083" class="bg-my-second text-white font-bold px-3 py-2 rounded-xl">
-                    افزودن
-                </a>
             </header>
 
             <!-- Table -->
@@ -54,13 +50,9 @@
                             <thead class="text-sm text-center uppercase bg-sky-900 text-white">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">ای دی</th>
-                                    <th scope="col" class="px-6 py-3">نام</th>
-                                    <th scope="col" class="px-6 py-3">دسته بندی</th>
-                                    <th scope="col" class="px-6 py-3">پوستر</th>
-                                    <th scope="col" class="px-6 py-3">نویسنده</th>
-                                    <th scope="col" class="px-6 py-3">بازدید</th>
-                                    <th scope="col" class="px-6 py-3">کامنت</th>
-                                    <th scope="col" class="px-6 py-3">وضعیت</th>
+                                    <th scope="col" class="px-6 py-3">نام کاربری</th>
+                                    <th scope="col" class="px-6 py-3">ایمیل</th>
+                                    <th scope="col" class="px-6 py-3">نوع</th>
                                     <th scope="col" class="px-6 py-3">عملیات</th>
                                 </tr>
                             </thead>
@@ -68,49 +60,29 @@
                                 <!-- Row 1 -->
                                 <tr>
                                     <th scope="row">101</th>
-                                    <td data-search="on">پی اچ پی</td>
-                                    <td>دسته بندی</td>
-                                    <td class="flex-1 min-w-32 flex justify-center items-center"><img
-                                            onclick="openView(this.src)"
-                                            class="w-full h-20 object-cover cursor-pointer rounded-md"
-                                            src="../assets/images/image-4 1.png" alt=""></td>
-                                    <td>جواد خان</td>
-                                    <td>24</td>
-                                    <td>24</td>
-                                    <td class=" text-red-500">غیرفعال</td>
+                                    <td data-search="on">جواد خان</td>
+                                    <td>dev.javad.mosavian@gmail.com</td>
+                                    <td>ادمین</td>
                                     <td class="px-2 w-72 py-4">
                                         <div class="flex text-center justify-center items-center gap-2">
-                                            <a href="#edite" class="bg-sky-500 admin-table-btn td-action">ویرایش</a>
+                                            <a href="#edite" class="bg-yellow-500 admin-table-btn td-action">تغییر
+                                                نوع</a>
                                             <form method="post"><button
-                                                    class="bg-green-500 admin-table-btn td-action">تغییر
-                                                    وضعیت</button></form>
-                                            <form method="post"><button
-                                                    class="bg-red-500 admin-table-btn td-action">حذف</button>
-                                            </form>
+                                                    class="bg-red-500 admin-table-btn td-action">حذف</button></form>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">101</th>
-                                    <td data-search="on">پی اچ پی</td>
-                                    <td>دسته بندی</td>
-                                    <td class="flex-1 min-w-32 flex justify-center items-center"><img
-                                            onclick="openView(this.src)"
-                                            class="w-full h-20 object-cover cursor-pointer rounded-md"
-                                            src="../assets/images/church_in_stanford-wallpaper-960x540.jpg" alt=""></td>
-                                    <td>جواد خان</td>
-                                    <td>24</td>
-                                    <td>24</td>
-                                    <td class=" text-red-500">غیرفعال</td>
+                                    <td data-search="on">رضا</td>
+                                    <td>reza@gmail.com</td>
+                                    <td>کاربر</td>
                                     <td class="px-2 w-72 py-4">
                                         <div class="flex text-center justify-center items-center gap-2">
-                                            <a href="#edite" class="bg-sky-500 admin-table-btn td-action">ویرایش</a>
+                                            <a href="#edite" class="bg-yellow-500 admin-table-btn td-action">تغییر
+                                                نوع</a>
                                             <form method="post"><button
-                                                    class="bg-green-500 admin-table-btn td-action">تغییر
-                                                    وضعیت</button></form>
-                                            <form method="post"><button
-                                                    class="bg-red-500 admin-table-btn td-action">حذف</button>
-                                            </form>
+                                                    class="bg-red-500 admin-table-btn td-action">حذف</button></form>
                                         </div>
                                     </td>
                                 </tr>
