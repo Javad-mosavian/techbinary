@@ -212,3 +212,22 @@ img{
     text-align: left;
     direction: ltr;
   }
+
+  .alert-hide{
+    animation: forwards 1s alert-hide ease-in-out;
+  }
+
+  .alert-show{
+    animation: forwards 1s alert-show ease-in-out;
+  }
+
+  @keyframes alert-show{
+    0% {transform: translateY(-100px);opacity: 0;display: none;}
+    50% {transform: translateY(0);opacity: 0.7;}
+    100%{transform: translateY(0);opacity: 1;}
+  }
+  @keyframes alert-hide{
+    0%{transform: translateY(0);opacity: 1;}
+    50% {transform: translateY(0);opacity: 0.7;}
+    100% {transform: translateY(-100px);opacity: 0;top: -100%; display: none;}
+  }
