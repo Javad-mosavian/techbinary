@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "tailwindcss/preflight.css" layer(base);
 
 @theme {
     --color-my-first: #FFFFFF;
@@ -11,8 +11,62 @@
     --color-light-text-Primary: #ffffff;
     --color-light-text-soft : #f5f5f5;
 
-  }
+    
 
+  }
+  @layer base{
+    #viewer img{
+      width: 100%;
+      margin: 20px 0;
+    }
+    #viewer p {
+      font-size: 1rem;
+      margin: 1em 0;
+      color: #333;
+      line-height: 2rem;
+    }
+    
+    #viewer h1 {
+      font-size: 1.5rem;
+      margin: 0.8em 0 0.4em;
+      font-weight: bold;
+      color: #222;
+    }
+    
+    #viewer h2 {
+      font-size: 1.3rem;
+      margin: 0.75em 0 0.4em;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    #viewer h3 {
+      font-size: 1.75rem;
+      margin: 0.7em 0 0.4em;
+      font-weight: bold;
+      color: #444;
+    }
+    
+    #viewer h4 {
+      font-size: 1.5rem;
+      margin: 0.6em 0 0.4em;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    #viewer b,
+    #viewer strong {
+      font-weight: bold;
+      color: #000;
+    }
+    
+    #viewer i,
+    #viewer em {
+      font-style: italic;
+      color: #666;
+    }
+    
+  }
   label,input{
     font-family: sahelNormal;
   }
@@ -57,7 +111,7 @@
         @apply opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-500 rounded-full bg-dark-text-soft size-8 text-light-text-soft cursor-pointer
     }
     .post-wrapper {
-        @apply w-full h-[200px] md:h-[280px] flex gap-5 py-5 
+        @apply w-full h-[220px] md:h-[280px] flex gap-5 py-5 
       }
     
       .post-left {
@@ -82,7 +136,7 @@
       }
     
       .post-title {
-        @apply text-lg md:text-2xl font-extrabold text-dark-text-Primary/80 pt-2 group-hover:underline
+        @apply text-[16px] md:text-2xl font-extrabold text-dark-text-Primary/80 pt-2 group-hover:underline
       }
     
       .post-excerpt {
@@ -94,15 +148,15 @@
       }
     
       .post-tag {
-        @apply bg-dark-text-soft/15 px-3 py-1 rounded-xl hover:bg-dark-text-soft/25 transition
+        @apply bg-dark-text-soft/15 px-2 md:px-3 py-1 rounded-xl hover:bg-dark-text-soft/25 transition text-[12px]
       }
     
       .like-checkbox {
         @apply  hidden
       }
     
-      .like-icon-wrapper {
-        @apply text-2xl transition duration-100 text-dark-text-soft peer-checked:text-red-500
+      .icon-wrapper {
+        @apply transition duration-100 text-dark-text-soft peer-checked:text-red-500 mr-auto h-full flex justify-start items-center gap-5 text-xl
       }
     
       .like-icon {
@@ -185,6 +239,7 @@
       .admin-table-btn-parent{
         @apply flex text-center justify-center items-center gap-2
       }
+      
 
     
 }
@@ -231,3 +286,4 @@ img{
     50% {transform: translateY(0);opacity: 0.7;}
     100% {transform: translateY(-100px);opacity: 0;top: -100%; display: none;}
   }
+

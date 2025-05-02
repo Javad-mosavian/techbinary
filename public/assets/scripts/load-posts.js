@@ -10,10 +10,10 @@ document.onscroll = () => {
     const clientPosition = window.scrollY;
     const pageHight = document.documentElement.scrollHeight;
 
-    if(2000 <= clientPosition && btnUp.classList.contains("hidden")){
+    if (2000 <= clientPosition && btnUp.classList.contains("hidden")) {
         btnUp.classList.add("fixed");
         btnUp.classList.remove("hidden");
-    }else if(2000 >= clientPosition && btnUp.classList.contains("fixed")){
+    } else if (2000 >= clientPosition && btnUp.classList.contains("fixed")) {
         btnUp.classList.add("hidden");
         btnUp.classList.remove("fixed");
     }
@@ -51,8 +51,8 @@ function create(response) {
 
 
 
-            let item =
-                `
+        let item =
+            `
         <div class="post-wrapper" data-aos="zoom-in-up">
                         <!-- Left Content -->
                         <div class="post-left">
@@ -64,7 +64,7 @@ function create(response) {
                             </div>
         
                             <!-- Main Content -->
-                            <a href="#" class="post-content group">
+                            <a href="post.html#id" class="post-content group">
                                 <h1 class="post-title">${elem.title}</h1>
                                 <p class="post-excerpt truncate">
                                 ${elem.body}
@@ -73,14 +73,13 @@ function create(response) {
         
                             <!-- Bottom Section -->
                             <div class="post-footer">
-                                <span class="text-sm">
-                                    <a href="#" class="post-tag">${elem.category}</a> | ${elem.read}
-                                </span>
+                                <span class="text-[12px] md:text-sm"> <a href="#" class="post-tag">${elem.category}</a><span><b class="px-1">|</b>${elem.read}</span></span>
                                 <label class="cursor-pointer" data-postid="${elem.id}">
                                     <input type="checkbox" name="like" onchange="_like(this)" class="like-checkbox peer" />
-                                    <div class="like-icon-wrapper">
-                                        <i class="like-icon fa fa-heart"></i>
-                                    </div>
+                                    <div class="icon-wrapper">
+                    <i class="like-icon fa fa-heart-o"></i>
+                    <i class="like-icon fa fa-bookmark-o"></i>
+                </div>
                                 </label>
                             </div>
                         </div>
@@ -91,7 +90,7 @@ function create(response) {
                         </a>
                     </div>
             `;
-            main.insertAdjacentHTML('beforeend', item);
+        main.insertAdjacentHTML('beforeend', item);
 
 
     });

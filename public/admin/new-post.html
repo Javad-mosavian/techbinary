@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 
@@ -75,7 +75,8 @@
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-light-text-Primary p-3">
 
 
-                        <form id="new" action="" method="post" class="p-10 w-full flex gap-10 flex-col flex-wrap" dir="rtl">
+                        <form id="new" action="" method="post" class="p-10 w-full flex gap-10 flex-col flex-wrap"
+                            dir="rtl">
                             <div class="flex gap-10">
                                 <label class="flex flex-col">
                                     عنوان :
@@ -110,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div id="toolbar-container" dir="ltr">
                                     <span class="ql-formats">
@@ -152,11 +153,13 @@
                                 <div id="editor">
                                 </div>
                             </div>
-                            <button class="bg-my-second cursor-pointer text-white font-bold px-3 py-2 rounded-xl max-w-20 text-center">انتشار</button>
+
                         </form>
+                        <button onclick="exp()"
+                            class="bg-my-second cursor-pointer text-white font-bold px-3 py-2 rounded-xl max-w-20 text-center">انتشار</button>
 
 
-                        
+
 
 
 
@@ -200,6 +203,15 @@
             placeholder: 'چیزی بنویسید.',
             theme: 'snow',
         });
+
+
+    </script>
+    <script>
+        function exp() {
+            const delta = quill.getContents();
+            localStorage.setItem("myQuillContent", JSON.stringify(delta));
+
+        }
     </script>
 </body>
 
