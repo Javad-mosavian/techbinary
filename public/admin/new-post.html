@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 
@@ -72,11 +72,11 @@
             <!-- Table -->
             <section class="flex-1 overflow-hidden rounded-2xl">
                 <div class="h-full overflow-y-auto space-y-5 p-5" dir="ltr">
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-light-text-Primary p-3">
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg bg-light-text-Primary p-10 space-y-5"
+                        dir="rtl">
 
 
-                        <form id="new" action="" method="post" class="p-10 w-full flex gap-10 flex-col flex-wrap"
-                            dir="rtl">
+                        <form id="new" action="" method="post" class="w-full flex gap-10 flex-col flex-wrap">
                             <div class="flex gap-10">
                                 <label class="flex flex-col">
                                     عنوان :
@@ -155,16 +155,12 @@
                             </div>
 
                         </form>
-                        <button onclick="exp()"
-                            class="bg-my-second cursor-pointer text-white font-bold px-3 py-2 rounded-xl max-w-20 text-center">انتشار</button>
-
-
-
-
-
-
-
-
+                        <div>
+                            <a href=""
+                                class="bg-orange-500 cursor-pointer text-white font-bold px-3 py-2 rounded-xl max-w-20 text-center min-w-10">لغو</a>
+                            <button onclick="exp()"
+                                class="bg-my-second cursor-pointer text-white font-bold px-3 py-2 rounded-xl max-w-20 text-center">افزودن</button>
+                        </div>
                     </div>
                 </div>
             </section>

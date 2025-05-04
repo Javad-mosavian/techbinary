@@ -215,7 +215,7 @@
       /* dashboardEnd */
 
       .td-action{
-        @apply hover:underline cursor-pointer
+        @apply hover:brightness-90 cursor-pointer
       }
       td.enabled{
         @apply text-green-600

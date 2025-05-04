@@ -467,6 +467,9 @@
   .max-w-40 {
     max-width: calc(var(--spacing) * 40);
   }
+  .min-w-10 {
+    min-width: calc(var(--spacing) * 10);
+  }
   .min-w-32 {
     min-width: calc(var(--spacing) * 32);
   }
@@ -1995,7 +1998,8 @@ p,span,a {
     cursor: pointer;
     &:hover {
       @media (hover: hover) {
-        text-decoration-line: underline;
+        --tw-brightness: brightness(90%);
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
       }
     }
   }
