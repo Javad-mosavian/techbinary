@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body dir="rtl" class="auth-body">
+    <div class="auth-parent h-auto">
+        <img class="w-30  mb-5" src="../Logo.png" alt="">
+        <h1> تکمیل حساب کاربری</h1>
+        <span>لطفا فیلد های زیر را پر کنید</span>
+        <form class="w-full space-y-2" action="" method="post">
+            <div class="relative z-0 my-2">
+                <input id="username" class="auth-inputs peer" type="text" name="" autocomplete="off" spellcheck="false"
+                    placeholder="" required>
+                <label for="username" class="auth-labels">نام کاربری</label>
+                <p class="auth-explain">
+                    نام کاربری حداقل ۳ کاراکتر و فقط شامل حروف، عدد یا خط تیره و زیرخط باشد.
+                </p>
+
+            </div>
+            <div class="relative z-0 my-5">
+                <input id="password" class="auth-inputs peer mb-2" type="password" name="" autocomplete="off"
+                    spellcheck="false" placeholder="" required>
+                <label for="password" class="auth-labels">رمز عبور</label>
+                <p class="auth-explain">
+                    رمز عبور باید حداقل ۸ کاراکتر و شامل یک حرف انگلیسی باشد.
+                </p>
+            </div>
+            <div class="relative z-0">
+                <input id="repassword" class="auth-inputs peer" type="password" name="" autocomplete="off"
+                    spellcheck="false" placeholder="" required>
+                <label for="repassword" class="auth-labels">تکرار رمز عبور</label>
+            </div>
+
+            <button id="submit" disabled class="auth-submit hover:bg-opacity-90" aria-label="finish">تکمیل</button>
+        </form>
+    </div>
+
+
+    <script src="../assets/scripts/align-inputs.js"></script>
+    <script src="../assets/scripts/alert.js"></script>
+    <script>
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+        
+        const repassword = document.querySelector('#repassword');
+        const button = document.querySelector('#submit');
+        const form = document.querySelector("form");
+
+        const usernamePattern = /^[a-zA-Z0-9_-]{3,}$/;
+        const passwordPattern = /^(?=.*[A-Za-z]).{8,}$/;
+
+        function validateForm() {
+            let isValid = true;
+
+            // Validate username
+            if (!usernamePattern.test(username.value)) {
+                username.classList.add("border-red-500");
+                isValid = false;
+            } else {
+                username.classList.remove("border-red-500");
+            }
+
+            // Validate password
+            if (!passwordPattern.test(password.value.trim())) {
+                password.classList.add("border-red-500");
+                isValid = false;
+            } else {
+                password.classList.remove("border-red-500");
+            }
+
+            // Validate password match
+            if (repassword.value !== password.value) {
+                repassword.classList.add("border-red-500");
+                isValid = false;
+            } else {
+                repassword.classList.remove("border-red-500");
+            }
+
+            button.disabled = !isValid;
+            return isValid;
+        }
+
+        // Event listeners
+        form.addEventListener('submit', (e) => {
+            if (!validateForm()) {
+                e.preventDefault();
+            }
+        });
+
+        username.addEventListener('input', validateForm);
+        password.addEventListener('input', validateForm);
+        // password.addEventListener("focus",showMsg())
+        repassword.addEventListener('input', validateForm);
+
+
+        // function showMsg(){
+        //     password.parentNode.querySelector("small").
+        // }
+
+    </script>
+</body>
+
+</html>

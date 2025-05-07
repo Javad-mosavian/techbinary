@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body dir="rtl"
+    class="h-[100svh] flex justify-center md:items-center bg-cover bg-center md:bg-[url(../../new-auth/p.jpg)]">
+    <div
+        class="bg-my-first flex py-4 gap-3 h-[400px] rounded-2xl w-[420px] flex-col justify-start items-center md:shadow-2xl px-10">
+        <img class="w-30  mb-5" src="../Logo.png" alt="">
+        <h1 class="text-xl md:text-xl text-dark-text-Primary text-right mb-2">ساخت حساب کاربری در تک باینری</h1>
+        <span class="text-dark-text-soft opacity-70 text-sm">ایمیل خود را وارد کنید.</span>
+        <form class="w-full space-y-2" action="" method="post">
+            <div class="relative z-0 my-2">
+                <input id="email"
+                    class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    type="text" name="" autocomplete="off" spellcheck="false" placeholder="" required>
+                <label for="email"
+                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">ایمیل</label>
+            </div>
+            <span id="err" class="text-sm text-red-600 hidden">ایمیل شما معتبر نمی باشد!</span>
+            <button id="submit" disabled
+                class="bg-my-second mt-5 transition-all cursor-pointer duration-300 hover:bg-opacity-90 text-lg font-bold py-1 rounded-sm w-full text-light-text-soft disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale-100"
+                aria-label="Continue with email">ادامه</button>
+        </form>
+        <div class="mt-auto flex flex-col items-center gap-3">
+            <span class="text-sm">قبلا عضو شده اید؟ <a href="" class="text-blue-500 font-bold">صفحه ورود</a></span>
+            <a href="" class="opacity-80 "></a>
+        </div>
+    </div>
+
+
+    <script src="../assets/scripts/align-inputs.js"></script>
+    <script src="../assets/scripts/alert.js"></script>
+    <script>
+        const inpu = document.querySelector('#email');
+        const button = document.querySelector('#submit');
+        const err = document.querySelector('#err');
+        const form = document.querySelector("form");
+        const pattern = /^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+        form.addEventListener('submit', (e) => {
+            if(valid() === false){
+                err.classList.remove("hidden");
+                button.disabled = !valid();
+                e.preventDefault();
+            }
+        });
+
+        inpu.addEventListener('input', () => {
+            button.disabled = !valid();
+        });
+
+        function valid() {
+            return pattern.test(inpu.value);
+        }
+
+    </script>
+</body>
+
+</html>

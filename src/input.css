@@ -3,7 +3,7 @@
 
 @theme {
     --color-my-first: #FFFFFF;
-    --color-my-second: #0369a1;
+    --color-my-second: #3D90D7;
     
     --color-dark-text-Primary: #1e293b;
     --color-dark-text-soft: #334155;
@@ -183,7 +183,7 @@
         @apply rounded-full justify-center items-center bg-sky-700 text-white size-[50px] md:size-14 z-30 cursor-pointer bottom-2 right-2 md:bottom-10 md:right-10
       }
       .digit-input{
-        @apply block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border border-gray-300 rounded-lg outline-none focus:ring-1
+        @apply block w-9 h-9 py-3 text-sm font-extrabold text-center text-gray-900 bg-white border-b border-gray-300 outline-none focus:ring-1 ring-blue-500 focus:rounded-lg transition-all duration-300
       }
       .auth-aside{
         @apply h-4/5 md:h-full w-full md:w-2/4 lg:w-2/6 2xl:w-1/4 bg-light-text-Primary flex flex-col justify-center items-center py-10
@@ -239,6 +239,39 @@
       .admin-table-btn-parent{
         @apply flex text-center justify-center items-center gap-2
       }
+
+
+      .auth-body{
+        @apply h-[100svh] flex justify-center md:items-center bg-cover bg-center md:bg-[url(../../new-auth/p.jpg)]
+      }
+
+      .auth-inputs{
+        @apply block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600
+      }
+
+      .auth-labels{
+        @apply absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto
+      }
+
+      .auth-submit{
+        @apply bg-my-second mt-5 transition-all cursor-pointer duration-300  text-lg font-bold py-1 rounded-sm w-full text-light-text-soft disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale-100
+      }
+
+      .auth-parent{
+        @apply bg-my-first flex py-4 gap-3 h-[500px] rounded-2xl w-[420px] flex-col justify-start items-center md:shadow-2xl px-10
+      }
+
+      .auth-parent h1{
+        @apply text-xl md:text-xl text-dark-text-Primary text-right mb-2
+      }
+      .auth-parent span{
+        @apply text-dark-text-soft opacity-70 text-sm
+      }
+
+      .auth-explain{
+        @apply text-gray-500 h-0 peer-focus:h-auto opacity-0 peer-focus:opacity-100 transition-all duration-200 text-sm
+      }
+      
       
 
     
