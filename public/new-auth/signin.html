@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body dir="rtl" class="auth-body">
+    <div class="auth-parent h-auto">
+        <img class="w-30  mb-5" src="../Logo.png" alt="">
+        <h1>ورود به حساب کاربری</h1>
+        <span>لطفا فیلد های زیر را پر کنید</span>
+        <form class="w-full space-y-2" action="" method="post">
+            <div class="relative z-0 my-2">
+                <input id="username" class="auth-inputs peer" type="text" name="" autocomplete="off" spellcheck="false"
+                    placeholder="" required>
+                <label for="username" class="auth-labels">ایمیل</label>
+
+            </div>
+            <div class="relative z-0 my-5">
+                <input id="password" class="auth-inputs peer mb-2" type="password" name="" autocomplete="off" spellcheck="false" placeholder="" required>
+                <label for="password" class="auth-labels">رمز عبور</label>
+            </div>
+
+
+            <button id="submit" disabled class="auth-submit hover:bg-opacity-90" aria-label="finish">ورود</button>
+            <div class="flex flex-col items-center gap-3 pt-10">
+                <span class="text-sm "><a href="forget.html" class="text-blue-500 font-bold mx-auto">فراموشی رمز عبور</a></span>
+            </div>
+            
+        </form>
+        <div class="mt-auto flex flex-col items-center gap-3">
+            <span class="text-sm"> حساب نداری؟ <a href="signup.html" class="text-blue-500 font-bold">صفحه ثبت نام</a></span>
+        </div>
+    </div>
+
+
+    <script src="../assets/scripts/align-inputs.js"></script>
+    <script src="../assets/scripts/alert.js"></script>
+</body>
+
+</html>

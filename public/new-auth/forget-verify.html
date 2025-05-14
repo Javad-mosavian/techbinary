@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body dir="rtl" class="auth-body">
+    <div class="auth-parent h-auto">
+        <img class="w-30  mb-5" src="../Logo.png" alt="">
+        <h1>ایمیل خود را تأیید کنید</h1>
+        <span>لطفا کد ارسال شده به <span class="text-sm font-extralight">dev.javad.mosavian@gmail.com</span> را وارد کنید</span>
+        <form class="w-full space-y-2" action="" method="post">
+            <div class="relative z-0 my-2">
+                <div dir="ltr" id="inputs" class="flex justify-center gap-3 items-center ">
+                    <div>
+                        <label for="code-1" class="sr-only">First code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-next="code-2"
+                            id="code-1" class="digit-input" required autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="code-2" class="sr-only">Second code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-1"
+                            data-focus-input-next="code-3" id="code-2" class="digit-input" required
+                            autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="code-3" class="sr-only">Third code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-2"
+                            data-focus-input-next="code-4" id="code-3" class="digit-input" required
+                            autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="code-4" class="sr-only">Fourth code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-3"
+                            data-focus-input-next="code-5" id="code-4" class="digit-input" required
+                            autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="code-5" class="sr-only">Fifth code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-4"
+                            data-focus-input-next="code-6" id="code-5" class="digit-input" required
+                            autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="code-6" class="sr-only">Sixth code</label>
+                        <input type="text" maxlength="1" data-focus-input-init data-focus-input-prev="code-5"
+                            id="code-6" class="digit-input" required autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+            <button id="submit" disabled class="auth-submit hover:bg-opacity-90" aria-label="Continue with email">تایید</button>
+            <div class="flex flex-col items-center gap-3 pt-10">
+                <button disabled class="disabled:text-dark-text-soft/70 text-sm text-center w-full select-none enabled:cursor-pointer text-blue-600 enabled:hover:underline">ارسال مجدد کد در <span id="timer"></span> ثانیه دیگر.</button>
+            </div>
+        </form>
+        
+
+        
+    </div>
+
+
+
+    <script src="../assets/scripts/alert.js"></script>
+    <script src="../assets/scripts/digit-inputs.js"></script>
+    <script src="../assets/scripts/auth/email-verify.js"></script>
+</body>
+
+</html>

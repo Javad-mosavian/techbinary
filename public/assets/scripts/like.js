@@ -2,6 +2,7 @@ const url = "https://mocki.io/v1/7cb75a23-a869-4b9d-b35b-5246c3fd318e";
 
 function _like(elem) {
     const parent = elem.parentNode;
+    let likes = parent.querySelector('span').innerHTML;
     const id = parent.getAttribute("data-postId");
     console.log(id + " : " + elem.checked);
 

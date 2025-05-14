@@ -330,10 +330,8 @@ img{
 
 .icon-wrapper {
     display: flex;
-    gap: 20px;
     margin-top: 15px;
-    padding: 10px;
-    justify-content: flex-end;
+    padding-top: 20px;
     border-radius: 8px;
 }
 
@@ -341,7 +339,16 @@ img{
 .bookmark-icon,
 .link-icon,
 .comment-icon {
-    font-size: 20px;
+    font-size: 25px;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.icon{
+  font-size: 20px;
     color: #6c757d;
     cursor: pointer;
     transition: all 0.3s ease;

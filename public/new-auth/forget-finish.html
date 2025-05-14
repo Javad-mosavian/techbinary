@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body dir="rtl" class="auth-body">
+    <div class="auth-parent h-auto">
+        <img class="w-30  mb-5" src="../Logo.png" alt="">
+        <h1> تغییر رمز حساب کاربری</h1>
+        <span>لطفا فیلد های زیر را پر کنید</span>
+        <form class="w-full space-y-2" action="" method="post">
+            <div class="relative z-0 my-5">
+                <input id="password" class="auth-inputs peer mb-2" type="password" name="" autocomplete="off" spellcheck="false" placeholder="" required>
+                <label for="password" class="auth-labels">رمز عبور</label>
+                <p class="auth-explain">
+                    رمز عبور باید حداقل ۸ کاراکتر و شامل یک حرف انگلیسی باشد.
+                </p>
+            </div>
+            <div class="relative z-0">
+                <input id="repassword" class="auth-inputs peer" type="password" name="" autocomplete="off"
+                    spellcheck="false" placeholder="" required>
+                <label for="repassword" class="auth-labels">تکرار رمز عبور</label>
+            </div>
+
+            <button id="submit" disabled class="auth-submit hover:bg-opacity-90" aria-label="finish">تغییر</button>
+        </form>
+    </div>
+
+
+    <script src="../assets/scripts/align-inputs.js"></script>
+    <script src="../assets/scripts/alert.js"></script>
+</body>
+
+</html>
