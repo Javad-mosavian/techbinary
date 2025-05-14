@@ -2,103 +2,184 @@
 <html lang="fa" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechBinary</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body dir="rtl">
-
-    <!-- header -->
+    <!-- Header -->
     <header class="w-full border-b border-black/10">
+        <div class="containe h-16 flex justify-between items-center px-1">
+            <!-- Logo -->
+            <img src="Logo.png" alt="TechBinary" class="w-28" />
 
-        <div class="containe h-16 flex justify-between items-center px-1 ">
-            <!-- logo -->
-            <img src="Logo.png" alt="TechBinary" class="w-28">
-            <!-- logeEnd -->
-
-
-            <!-- search -->
+            <!-- Search -->
             <form id="search" method="get" action=""
                 class="group hidden md:flex bg-light-text-soft rounded-3xl h-2/3 items-center p-1 gap-1">
-                <div class="rounded-full size-8 text-dark-text-Primary flex justify-center items-center"><i
-                        class="fa fa-search"></i></div>
-
-                <input type="text" class="input-search" placeholder="جستوجوی باینری...">
-
-                <button class="btn-search"><i class="fa fa-arrow-left"></i></button>
+                <div class="rounded-full size-8 text-dark-text-Primary flex justify-center items-center">
+                    <i class="fa fa-search"></i>
+                </div>
+                <input type="text" class="input-search" placeholder="جستوجوی باینری..." />
+                <button class="btn-search">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
             </form>
-            <!-- searchEnd -->
 
-
-            <!-- auth -->
+            <!-- Auth Buttons -->
             <div class="flex gap-2 items-center">
                 <a class="px-3 pb-1 text-dark-text-Primary text-lg" href="./auth/signin.html">ورود</a>
                 <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md"
                     href="./auth/signup.html">ثبت نام</a>
             </div>
-            <!-- authEnd -->
         </div>
-
     </header>
-    <!-- headerEnd -->
 
-
-    <section class="containe md:flex-row-reverse flex flex-col md:gap-2 lg:gap-10 ">
-
+    <!-- Main Section -->
+    <section class="containe md:flex-row-reverse flex flex-col md:gap-2 lg:gap-10 h-full">
+        <!-- Aside -->
         <aside id="aside"
             class="w-full md:w-1/3 md:min-h-full flex flex-col border-r-2 p-2 md:pr-8 border-black/10 pt-10 md:py-10 gap-5">
-
-            <!-- ad -->
-
-            <!-- <a href="">
-                <div id="advertisment" class="w-full h-52 bg-slate-200 flex items-center justify-center rounded-2xl">
-                    <h1 class="text-center text-2xl font-bold">Your AD <br>Here</h1>
-                </div>
-            </a> -->
-
-            <!-- adEnd -->
-
-
+            <!-- Advertisment Placeholder -->
+            <!--
+      <a href="">
+        <div id="advertisment" class="w-full h-52 bg-slate-200 flex items-center justify-center rounded-2xl">
+          <h1 class="text-center text-2xl font-bold">Your AD <br>Here</h1>
+        </div>
+      </a>
+      -->
         </aside>
-        <main id="main" class="w-full relative pb-24 pl-2 lg:pl-8 md:w-2/3 flex flex-col md:pl-5 md:py-10">
-            <button id="btn-up" onclick="window.scrollTo(0,0);" class="btn-up hidden"><i
-                    class="fa fa-arrow-up"></i></button>
 
+        <!-- Main Content -->
+        <main id="main" class="w-full relative pb-24 pl-2 lg:pl-8 md:w-2/3 flex flex-col md:pl-5 md:py-10 h-full mb-10">
+
+            <!-- Author -->
             <div class="post-author mb-10 px-4">
                 <img src="assets/images/images 1.png" alt="Author" class="post-author-img" />
                 <div class="flex flex-col justify-center">
                     <span class="post-author-text">جواد</span>
-                    <span class="text-[14px] opacity-60 font-medium">
-                        خواندن ۵ دقیقه | ۱۰ روز پیش
-                    </span>
+                    <span class="text-[13px] opacity-60 font-medium">خواندن ۵ دقیقه | ۱۰ روز پیش</span>
                 </div>
-                <div class="icon-wrapper">
-                    <i class="like-icon fa fa-heart-o"></i>
-                    <i class="like-icon fa fa-bookmark-o"></i>
+                
+                <!-- Icons -->
+                <div class="icon-wrapper h-20 flex items-start">
+                    <!-- Like -->
+                    <label class="flex flex-col items-center justify-center">
+                        <input type="checkbox" class="icon-checkbox like-toggle" hidden>
+                        <i class="fa fa-heart-o like-icon"></i>
+                        <span class="text-sm text-dark-text-soft">25</span>
+                    </label>
+                    <!-- Comment -->
+                    <a href="#comments" class="flex flex-col items-center justify-center">
+                        <input type="checkbox" class="icon-checkbox" hidden />
+                        <i class="fa fa-comment-o comment-icon"></i>
+                        <span class="text-sm text-dark-text-soft">25</span>
+                    </a>
+
+                    <!-- Bookmark -->
+                    <label>
+                        <input type="checkbox" class="icon-checkbox bookmark-toggle" hidden />
+                        <i class="fa fa-bookmark-o bookmark-icon"></i>
+                    </label>
+                    <!-- link -->
+                    <button>
+                        <i class="fa fa-link link-icon"></i>
+                    </button>
                 </div>
             </div>
 
-            </div>
-
+            <!-- Quill Viewer -->
             <div id="viewer" class="w-full"></div>
 
+            <!-- Tags and Bottom Icons -->
+            <div class="grid grid-rows-1 grid-cols-2 items-center justify-between space-x-10">
+                <div class="w-full flex flex-wrap gap-2 justify-start items-start content-start">
+                    <a href="" class="aside-category">category</a>
+                    <a href="" class="aside-category">go</a>
+                    <a href="" class="aside-category">like</a>
+                    <a href="" class="aside-category">content</a>
+                </div>
 
+                <div class="icon-wrapper h-20 flex items-start">
+                    <!-- Like -->
+                    <label class="flex flex-col items-center justify-center">
+                        <input type="checkbox" class="icon-checkbox like-toggle" hidden>
+                        <i class="fa fa-heart-o like-icon"></i>
+                        <span class="text-sm text-dark-text-soft">25</span>
+                    </label>
+
+                    <!-- Bookmark -->
+                    <label>
+                        <input type="checkbox" class="icon-checkbox bookmark-toggle" hidden>
+                        <i class="fa fa-bookmark-o bookmark-icon"></i>
+                    </label>
+
+                    <!-- link -->
+                    <button>
+                        <i class="fa fa-link link-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <hr class="hr-post" />
+
+            <!-- Comments Section -->
+            <div id="comments" class="w-full flex flex-col py-10 justify-center items-center space-y-5">
+                <div>
+                    <i class="fa fa-comment p-4 bg-sky-700 rounded-full text-white text-lg"></i>
+                    <span class="text-lg font-bold text-dark-text-soft px-2">کامنت ها</span>
+                </div>
+
+                <!-- Comment Form -->
+                <form action="" method="post" class="w-full border border-black/10 px-3 py-4 space-y-3">
+                    <div class="post-author mb-10">
+                        <img src="assets/images/images 1.png" alt="Author" class="post-comment-img" />
+                        <div class="flex flex-col justify-center">
+                            <span class="post-comment-text">جواد</span>
+                        </div>
+                    </div>
+
+                    <textarea class="w-full h-auto resize-none border-none outline-none"
+                        placeholder="چیزی بنویسید."></textarea>
+                    <hr class="hr-post" />
+
+                    <div class="w-full flex items-center justify-end gap-5">
+                        <button type="reset"
+                            class="bg-transparent border-gray-700 border-2 rounded-2xl px-3 py-1.5 text-black text-sm font-bold">انصراف</button>
+                        <button type="submit"
+                            class="bg-blue-400 rounded-2xl px-3 py-1.5 text-white text-sm font-bold">ارسال نظر</button>
+                    </div>
+                </form>
+
+                <!-- Existing Comment -->
+                <div class="w-full border border-black/10 px-3 py-4">
+                    <div class="post-author mb-5">
+                        <img src="assets/images/images 1.png" alt="Author" class="post-comment-img" />
+                        <div class="flex flex-col justify-center">
+                            <span class="post-comment-text text-dark-text-soft">جواد</span>
+                            <span class="text-[13px] opacity-60 font-medium">۱۰ روز پیش</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, ex?</p>
+                </div>
+            </div>
         </main>
     </section>
 
-
-
+    <!-- Scripts -->
     <script src="assets/scripts/client-search.js"></script>
     <script src="assets/scripts/like.js"></script>
 
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script>
         const savedDelta = JSON.parse(localStorage.getItem("myQuillContent"));
 
@@ -111,8 +192,11 @@
         viewer.setContents(savedDelta);
     </script>
 
-
-
+    <script>
+        document.querySelector('.link-icon').parentNode.addEventListener("click", () => {
+            navigator.clipboard.writeText(window.location.href);
+        })
+    </script>
 </body>
 
 </html>

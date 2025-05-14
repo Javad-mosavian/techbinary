@@ -22,8 +22,6 @@ document.onscroll = () => {
         load();
     }
 
-
-
 };
 
 function load() {
@@ -74,13 +72,20 @@ function create(response) {
                             <!-- Bottom Section -->
                             <div class="post-footer">
                                 <span class="text-[12px] md:text-sm"> <a href="#" class="post-tag">${elem.category}</a><span><b class="px-1">|</b>${elem.read}</span></span>
+                                <div class="flex gap-3">
                                 <label class="cursor-pointer" data-postid="${elem.id}">
                                     <input type="checkbox" name="like" onchange="_like(this)" class="like-checkbox peer" />
                                     <div class="icon-wrapper">
                     <i class="like-icon fa fa-heart-o"></i>
-                    <i class="like-icon fa fa-bookmark-o"></i>
                 </div>
                                 </label>
+                                <label class="cursor-pointer" data-postid="${elem.id}">
+                                    <input type="checkbox" name="like" onchange="_like(this)" class="like-checkbox peer" />
+                                    <div class="icon-wrapper">
+                    <i class="save-icon fa fa-bookmark-o"></i>
+                </div>
+                                </label>
+                                </div>
                             </div>
                         </div>
         

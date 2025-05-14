@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="fa" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>TechBinary</title>
-</head>
-
-<body dir="rtl">
-
-    <!-- header -->
+<!-- header -->
     <header class="containe h-16 flex justify-between items-center px-1">
 
         <!-- logo -->
@@ -35,11 +20,44 @@
 
 
         <!-- auth -->
-        <div class="flex gap-2 items-center">
+        <!-- <div class="flex gap-2 items-center">
             <a class="px-3 pb-1 text-dark-text-Primary text-lg" href="./auth/signin.html">ورود</a>
             <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md" href="./auth/signup.html">ثبت نام</a>
-        </div>
+        </div> -->
         <!-- authEnd -->
+
+        <!-- Userlog -->
+
+<div class="relative">
+    <button id="dropdownAvatarNameButton"
+        class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full hover:text-blue-600 cursor-pointer"
+        type="button">
+        <span class="sr-only">Open user menu</span>
+        <svg class="w-2.5 h-2.5 mx-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 4 4 4-4" />
+        </svg>
+        javad_khan
+    </button>
+
+    <!-- Dropdown menu -->
+    <div id="dropdownAvatarName" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute top-full left-0 md:right-0 mt-6 text-center">
+        <div class="px-4 py-3 text-sm text-gray-900">
+            <div class="truncate">javad@gmail.com</div>
+        </div>
+        <ul class="py-2 text-sm text-gray-700">
+            <li><a href="./admin/dashboard.html" class="block px-4 py-2 hover:bg-gray-100">پنل مدیریت</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a></li>
+        </ul>
+        <form class="py-2" action="signout" method="post">
+            <button href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full">خروج</button>
+        </form>
+    </div>
+</div>
+<!-- UserlogEnd -->
+
 
     </header>
     <!-- headerEnd -->

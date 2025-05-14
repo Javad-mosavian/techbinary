@@ -35,12 +35,44 @@
 
 
         <!-- auth -->
-        <div class="flex gap-2 items-center">
+        <!-- <div class="flex gap-2 items-center">
             <a class="px-3 pb-1 text-dark-text-Primary text-lg" href="./auth/signin.html">ورود</a>
-            <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md"
-                href="./auth/signup.html">ثبت نام</a>
-        </div>
+            <a class="rounded-2xl bg-my-second text-light-text-Primary px-3 py-1 font-bold text-md" href="./auth/signup.html">ثبت نام</a>
+        </div> -->
         <!-- authEnd -->
+
+        <!-- Userlog -->
+
+<div class="relative">
+    <button id="dropdownAvatarNameButton"
+        class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full hover:text-blue-600 cursor-pointer"
+        type="button">
+        <span class="sr-only">Open user menu</span>
+        <svg class="w-2.5 h-2.5 mx-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 4 4 4-4" />
+        </svg>
+        javad_khan
+    </button>
+
+    <!-- Dropdown menu -->
+    <div id="dropdownAvatarName" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute top-full left-0 md:right-0 mt-6 text-center">
+        <div class="px-4 py-3 text-sm text-gray-900">
+            <div class="truncate">javad@gmail.com</div>
+        </div>
+        <ul class="py-2 text-sm text-gray-700">
+            <li><a href="./admin/dashboard.html" class="block px-4 py-2 hover:bg-gray-100">پنل مدیریت</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a></li>
+        </ul>
+        <form class="py-2" action="signout" method="post">
+            <button href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full">خروج</button>
+        </form>
+    </div>
+</div>
+<!-- UserlogEnd -->
+
 
     </header>
     <!-- headerEnd -->
@@ -68,12 +100,17 @@
 
     <section class="containe md:flex-row-reverse flex flex-col md:gap-2 lg:gap-10 ">
 
-        <aside id="aside" class="w-full md:w-1/3 md:min-h-full flex flex-col border-r-2 p-2 md:pr-8 border-black/10 pt-10 md:py-10 gap-5">
+        <aside id="aside"
+            class="w-full md:w-1/3 md:min-h-full flex flex-col border-r-2 p-2 md:pr-8 border-black/10 pt-10 md:py-10 gap-5">
 
             <div class=" md:hidden mb-10 ">
-                <div class="w-full  flex flex-wrap gap-2 justify-start items-start content-start bg-slate-200 p-3 rounded-2xl">
-                    <h2 class="text-xl w-full text-center justify-center flex items-center gap-2 text-dark-text-soft mb-2">دسته بندی ها</h2>
-                    <div id="mobile-category" class="grid grid-cols-2 w-full text-center space-y-5 overflow-hidden relative transition duration-700">
+                <div
+                    class="w-full  flex flex-wrap gap-2 justify-start items-start content-start bg-slate-200 p-3 rounded-2xl">
+                    <h2
+                        class="text-xl w-full text-center justify-center flex items-center gap-2 text-dark-text-soft mb-2">
+                        دسته بندی ها</h2>
+                    <div id="mobile-category"
+                        class="grid grid-cols-2 w-full text-center space-y-5 overflow-hidden relative transition duration-700">
                         <a href="" class="aside-category-mobile">category</a>
                         <a href="" class="aside-category-mobile">go</a>
                         <a href="" class="aside-category-mobile">like</a>
@@ -84,7 +121,7 @@
                         <a href="" class="aside-category-mobile">app</a>
                     </div>
                 </div>
-            </div >
+            </div>
             <!-- ad -->
 
             <!-- <a href="">
@@ -111,10 +148,12 @@
 
                 </div>
             </div>
-            
+
         </aside>
-        <main id="main" class="w-full relative pb-24 px-2 md:px-5 lg:px-8 md:w-2/3 flex flex-col md:py-10 divide-black/10 divide-y-[1px]">
-            <button id="btn-up" onclick="window.scrollTo(0,0);" class="btn-up hidden"><i class="fa fa-arrow-up"></i></button>
+        <main id="main"
+            class="w-full relative pb-24 px-2 md:px-5 lg:px-8 md:w-2/3 flex flex-col md:py-10 divide-black/10 divide-y-[1px]">
+            <button id="btn-up" onclick="window.scrollTo(0,0);" class="btn-up hidden"><i
+                    class="fa fa-arrow-up"></i></button>
             <div class="w-full max-w-5xl mx-auto py-2 md:py-5 h-[600px] px-4">
                 <h2 class="text-3xl font-bold text-center mb-5 text-gray-800">محبوب‌ترین ها</h2>
 
@@ -195,6 +234,15 @@
             once: true,
             duration: 600,
             easing: 'ease-out-back'
+        });
+    </script>
+    <script>
+        const dropdownButton = document.getElementById('dropdownAvatarNameButton');
+        const dropdownMenu = document.getElementById('dropdownAvatarName');
+    
+        // Toggle dropdown visibility
+        dropdownButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
         });
     </script>
 </body>
