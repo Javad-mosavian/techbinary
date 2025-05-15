@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 
@@ -16,7 +17,7 @@
         <form class="w-full space-y-2" action="" method="post">
             <div class="relative z-0 my-5">
                 <input id="password" class="auth-inputs peer mb-2" type="password" name="" autocomplete="off" spellcheck="false" placeholder="" required>
-                <label for="password" class="auth-labels">رمز عبور</label>
+                <label for="password" class="auth-labels">رمز عبور جدید</label>
                 <p class="auth-explain">
                     رمز عبور باید حداقل ۸ کاراکتر و شامل یک حرف انگلیسی باشد.
                 </p>
@@ -30,10 +31,19 @@
             <button id="submit" disabled class="auth-submit hover:bg-opacity-90" aria-label="finish">تغییر</button>
         </form>
     </div>
-
+<div id="auth-social">
+        <span>ما را در</span>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-whatsapp"></i></a>
+        <a href=""><i class="fa fa-telegram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-pinterest"></i></a>
+        <span>دنبال کنید</span>
+    </div>
 
     <script src="../assets/scripts/align-inputs.js"></script>
     <script src="../assets/scripts/alert.js"></script>
+    <script src="../assets/scripts/auth/forget-finish.js"></script>
 </body>
 
 </html>

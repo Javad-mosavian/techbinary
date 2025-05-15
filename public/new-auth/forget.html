@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body dir="rtl" class="auth-body">
@@ -15,9 +16,9 @@
         <span>لطفا ایمیل خود را وارد کنید</span>
         <form class="w-full space-y-2" action="" method="post">
             <div class="relative z-0 my-2">
-                <input id="username" class="auth-inputs peer" type="text" name="" autocomplete="off" spellcheck="false"
+                <input id="email" class="auth-inputs peer" type="text" name="" autocomplete="off" spellcheck="false"
                     placeholder="" required>
-                <label for="username" class="auth-labels">ایمیل</label>
+                <label for="email" class="auth-labels">ایمیل</label>
 
             </div>
 
@@ -25,10 +26,19 @@
             
         </form>
     </div>
-
+<div id="auth-social">
+        <span>ما را در</span>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-whatsapp"></i></a>
+        <a href=""><i class="fa fa-telegram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-pinterest"></i></a>
+        <span>دنبال کنید</span>
+    </div>
 
     <script src="../assets/scripts/align-inputs.js"></script>
     <script src="../assets/scripts/alert.js"></script>
+        <script src="../assets/scripts/auth/get-email.js"></script>
 </body>
 
 </html>
